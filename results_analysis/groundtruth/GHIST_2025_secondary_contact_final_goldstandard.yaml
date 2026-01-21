@@ -1,0 +1,9 @@
+description: Mainland-island mice split and delayed migration.
+time_units: generations
+population_units: number_of_individuals
+parameters:
+  mainland_population_size: 43748.956
+  island_population_size: 26874.552
+  generations_since_split: 17880.54
+  generations_since_migration: 2573
+  migration_rate: 0.0000733
