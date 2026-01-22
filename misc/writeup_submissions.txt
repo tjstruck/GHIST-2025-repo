@@ -1,0 +1,14 @@
+Team/Participant	Submitter username(s)	Submitter ID(s)	Synapse email	Writeup Link
+"Garud Lab (Peter Laurin, Brendan Aeria, Maya Weissman, Nandita Garud)"	peterlaurin	3561154	peterlaurin@synapse.org	https://www.synapse.org/Synapse:syn70814612/wiki/635916
+Alouette Zhang	alouette	3553620	alouette@synapse.org	https://www.synapse.org/Synapse:syn70090664/wiki/635486
+Andrew Vaughn	avaughn	3508906	avaughn@synapse.org	https://www.synapse.org/Synapse:syn68843954/wiki/635910
+"Tommaso Stentella, Peter F. Arndt"	tstentella	3559911	tstentella@synapse.org	https://www.synapse.org/Synapse:syn71061220/wiki/635911
+"Xmon (Simon Chen, Xin Huang)"	huangdaxian	3557947	huangdaxian@synapse.org	https://www.synapse.org/Synapse:syn71782688/wiki/635907
+Alexander Mackintosh	Igelkott	3550636	Igelkott@synapse.org	https://www.synapse.org/Synapse:syn68818816/wiki/633863
+Stephen Rong	srong	3446506	srong@synapse.org	https://www.synapse.org/Synapse:syn68818816/wiki/633863
+Austin Daigle	austin.t.daigle	3508154	austin.t.daigle@synapse.org	
+Raphael Gollnisch	rgollnisch	3554268	rgollnisch@synapse.org	
+Leon Zong	lzong	3553843	lzong@synapse.org	
+Weiqi Wang	wang0207	3554444	wang0207@synapse.org	
+Solomon Sloat	solomonsloat	3547691	solomonsloat@synapse.org	
+Jiatong Liang	JiatongLiang	3557522	JiatongLiang@synapse.org	
