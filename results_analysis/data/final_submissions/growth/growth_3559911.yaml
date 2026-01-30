@@ -1,0 +1,6 @@
+description: Single-population growth demography.
+time_units: generations
+post_growth_scaling: ratio_of_modern_population_size_to_ancient_population_size
+parameters:
+  generations: 203
+  post_growth_scaling: 1.754

@@ -1,0 +1,6 @@
+description: Single-population bottleneck demography.
+time_units: generations
+post_decline_fraction: ratio_of_modern_individuals_to_ancient_individuals
+parameters:
+  generations: 9650.
+  post_decline_fraction: 0.5598

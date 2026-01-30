@@ -1,0 +1,6 @@
+description: Single-population two-epoch demography.
+time_units: generations
+population_units: number_of_individuals
+parameters:
+  generations: 1532.3345
+  post_growth_scaling: 2.5227479190216835
