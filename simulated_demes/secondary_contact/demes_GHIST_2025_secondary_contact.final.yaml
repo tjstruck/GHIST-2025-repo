@@ -1,0 +1,30 @@
+time_units: generations
+generation_time: 1
+demes:
+- name: ancestral
+  epochs:
+  - {end_time: 55787.2848, start_size: 47362.0}
+  - {end_time: 35939.8854, start_size: 16915.0}
+  - {end_time: 32184.972, start_size: 4465.56}
+  - {end_time: 26820.81, start_size: 13532.0}
+  - {end_time: 17880.54, start_size: 13532.0}
+- name: mainland
+  ancestors: [ancestral]
+  epochs:
+  - {end_time: 13410.405, start_size: 43748.956}
+  - {end_time: 9834.297, start_size: 78748.1208}
+  - {end_time: 4470.135, start_size: 153121.346}
+  - {end_time: 0, start_size: 43748.956}
+- name: island
+  ancestors: [ancestral]
+  epochs:
+  - {end_time: 8940.27, start_size: 1347.3812400000002}
+  - {end_time: 5146, start_size: 2964.2387280000007}
+  - {end_time: 2573, start_size: 1616.857488}
+  - {end_time: 1929.75, start_size: 26874.552}
+  - {end_time: 1157.8500000000001, start_size: 13437.276}
+  - {end_time: 0, start_size: 26874.552}
+migrations:
+- demes: [mainland, island]
+  rate: 7.33e-05
+  start_time: 2573.0

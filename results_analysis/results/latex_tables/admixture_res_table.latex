@@ -1,0 +1,4 @@
+RRMSE & $\%\text{admix}_1$ & $T\text{admix}_1$ & $\%\text{admix}_2$ & $T\text{admix}_2$ & Competitor & Approach\\
+truth & 0.0202 & 1159.45 & 0.0018 & 823.78 & & \\
+63.1439 & 0.005 & 25000.0 & 0.001 & 50000.0 & srong & insert \\
+0.9428 & 0.002 & 1000.0 & 0.002 & 1000.0 & avaughn & insert \\

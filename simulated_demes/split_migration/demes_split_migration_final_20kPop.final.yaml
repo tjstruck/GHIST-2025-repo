@@ -1,0 +1,16 @@
+time_units: generations
+generation_time: 1
+demes:
+- name: AFR
+  description: African D. melanogaster population
+  epochs:
+  - {end_time: 0, start_size: 15976.21}
+- name: EUR
+  description: European D. melanogaster population
+  start_time: 4121.876
+  ancestors: [AFR]
+  epochs:
+  - {end_time: 0, start_size: 22372.345}
+migrations:
+- demes: [AFR, EUR]
+  rate: 5.239e-05

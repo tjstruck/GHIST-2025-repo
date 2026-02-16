@@ -1,0 +1,73 @@
+time_units: generations
+generation_time: 1
+demes:
+- name: ancestral
+  epochs:
+  - {end_time: 22619.835, start_size: 15993.7}
+  - {end_time: 18095.868, start_size: 47981.100000000006}
+  - {end_time: 15079.89, start_size: 63974.8}
+- name: common_ancestor
+  ancestors: [ancestral]
+  epochs:
+  - {end_time: 0, start_size: 31987.4}
+- name: ancient_population
+  ancestors: [ancestral]
+  epochs:
+  - {end_time: 1754.67, start_size: 5048.9}
+- name: AncPop1
+  start_time: 12950.23
+  ancestors: [common_ancestor]
+  epochs:
+  - {end_time: 0, start_size: 12999.6}
+- name: AncOut3
+  start_time: 10875.67
+  ancestors: [common_ancestor]
+  epochs:
+  - {end_time: 0, start_size: 12999.6}
+- name: AncOut2
+  start_time: 9950.34
+  ancestors: [common_ancestor]
+  epochs:
+  - {end_time: 0, start_size: 12999.6}
+- name: AncOut1
+  start_time: 7950.89
+  ancestors: [common_ancestor]
+  epochs:
+  - {end_time: 0, start_size: 12999.6}
+- name: AncPop2
+  start_time: 6850.12
+  ancestors: [common_ancestor]
+  epochs:
+  - {end_time: 0, start_size: 12999.6}
+- name: Modern_pop1
+  ancestors: [ancient_population]
+  epochs:
+  - {end_time: 927.5600000000001, start_size: 2199.78}
+  - {end_time: 0, start_size: 8949.56}
+- name: Modern_pop2
+  ancestors: [ancient_population]
+  epochs:
+  - {end_time: 659.024, start_size: 1279.34}
+  - {end_time: 0, start_size: 6899.12}
+migrations:
+- demes: [AncOut2, AncPop1, AncOut1]
+  rate: 3.105e-05
+- demes: [AncOut2, AncOut3]
+  rate: 3.105e-05
+- demes: [AncOut3, AncOut1]
+  rate: 3.105e-05
+- demes: [AncOut3, AncPop2]
+  rate: 3.105e-05
+- demes: [AncPop1, AncPop2]
+  rate: 3.105e-05
+- demes: [Modern_pop1, Modern_pop2]
+  rate: 3.105e-05
+pulses:
+- sources: [AncPop1]
+  dest: Modern_pop1
+  time: 1159.45
+  proportions: [0.0202]
+- sources: [AncOut2]
+  dest: Modern_pop2
+  time: 823.78
+  proportions: [0.0018]

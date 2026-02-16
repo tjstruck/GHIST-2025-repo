@@ -2,14 +2,14 @@ from pathlib import Path
 import os, glob
 import numpy as np, matplotlib.pyplot as plt
 
-os.system('vcftools --gzvcf GHIST_2025_multisweep.15.final.vcf.gz --TajimaD 10000')
-os.system('vcftools --gzvcf GHIST_2025_multisweep.15.final.vcf.gz --window-pi 10000')
+os.system('vcftools --gzvcf data/vcf/GHIST_2025_multisweep.15.final.vcf.gz --TajimaD 10000 --out results/out')
+os.system('vcftools --gzvcf data/vcf/GHIST_2025_multisweep.15.final.vcf.gz --window-pi 10000 --out results/out')
 
-truth = [int(line.split()[1]) for line in open("GHIST_submissions_and_truth/groundtruth/GHIST_2025_multi_sweep_final_goldstandard.bed")]
+truth = [int(line.split()[1]) for line in open("data/groundtruth/GHIST_2025_multi_sweep_final_goldstandard.bed")]
 
-data = np.genfromtxt(fname="out.windowed.pi", delimiter="\t", skip_header=1)
+data = np.genfromtxt(fname="results/out.windowed.pi", delimiter="\t", skip_header=1)
 
-for fname in glob.glob("GHIST_submissions_and_truth/final_submissions/multi_sweep/*"):
+for fname in glob.glob("data/final_submissions/multi_sweep/*"):
     stem = Path(fname).stem
     uid = stem.split("_")[-1]
     if uid.isdigit():
@@ -35,4 +35,4 @@ for fname in glob.glob("GHIST_submissions_and_truth/final_submissions/multi_swee
     #fig.text(0.5, 1.0, "Multiple Sweep Detection Challenge", va='top', ha='center', fontsize=15, color='blue')
     fig.tight_layout(pad=0.1)
     fig.subplots_adjust(top=0.89)
-    fig.savefig(f"submission_{uid}_multisweep.pdf")
+    fig.savefig(f"results/submission_{uid}_multisweep.pdf")

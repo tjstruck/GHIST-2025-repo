@@ -1,0 +1,9 @@
+F1 & Recall & Size (x100 kb) & Competitor & Approach\\
+truth & 1 & 1e-05 & & \\
+0.6667 & 1.0 & 1.0 & austin.t.daigle & insert \\
+0.6061 & 1.0 & 1.3 & avaughn & insert \\
+0.6007 & 1.0 & 1.3296 & srong & insert \\
+0.5 & 1.0 & 2.0 & alouette & insert \\
+0.0 & 0.0 & 0.5 & huangdaxian & insert \\
+0.0 & 0.0 & 0.93 & rgollnisch & insert \\
+0.0 & 0.0 & 1.1362 & peterlaurin & insert \\

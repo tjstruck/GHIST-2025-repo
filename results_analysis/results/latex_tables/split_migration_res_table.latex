@@ -1,0 +1,4 @@
+RRMSE & $N_\text{AFR}$ & $N_\text{AFR}$ & $T_\text{split}$ & $m$ & Competitor & Approach\\
+truth & 15976.21 & 15976.21 & 4121.876 & 0.0005239 & & \\
+0.9009 & 16337.0 & 16337.0 & 3948.0 & 0.0001 & austin.t.daigle & insert \\
+0.8458 & 16179.6453 & 16179.6453 & 1465.9712 & 0.0002 & srong & insert \\

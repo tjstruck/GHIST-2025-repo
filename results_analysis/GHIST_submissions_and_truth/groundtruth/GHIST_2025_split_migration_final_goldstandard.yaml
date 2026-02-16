@@ -1,9 +1,0 @@
-description: Population split between continential Africa and Europe, with migration.
-time_units: generations
-population_units: number_of_individuals
-migration_units: continuous_per_generation_probability_of_migration
-parameters:
-  AFR_population_size: 15976.21
-  EUR_population_size: 22372.345
-  generations_since_split: 4121.876
-  migration_rate: 0.0005239

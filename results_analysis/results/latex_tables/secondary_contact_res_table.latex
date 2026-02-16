@@ -1,0 +1,5 @@
+RRMSE & $N_\text{main}$ & $N_\text{island}$ & $T_\text{split}$ & $T_\text{mig}$ & $m$ & Competitor & Approach\\
+truth & 43748.956 & 26874.552 & 17880.54 & 2573 & 7.33e-05 & & \\
+2.17 & 45380.0 & 7213.0 & 51350.0 & 4220.0 & 0.0 & avaughn & insert \\
+1.3754 & 53500.0 & 25000.0 & 13500.0 & 6000.0 & 0.0001 & solomonsloat & insert \\
+0.9938 & 25000.0 & 17000.0 & 10000.0 & 1000.0 & 0.0001 & srong & insert \\

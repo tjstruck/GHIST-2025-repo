@@ -75,7 +75,7 @@ def participant_dict(uid):
         'alouette': 'Zhang',
         'avaughn': 'Vaughn',
         'tstentella': 'Stentella and Arndt',
-        'huangdaxian': 'Xmon Group',
+        'huangdaxian': 'Xmon Group', # or Chen and Huang
         'Igelkott': 'Mackintosh',
         'srong': 'Rong',
         'austin.t.daigle': 'Daigle',
@@ -94,17 +94,18 @@ def method_dict(uid):
     :param uid: Description
     '''
     method_dict = {
-        'peterlaurin': '',
-        'alouette': '',
-        'avaughn': '',
-        'tstentella': '',
-        'huangdaxian': '',
-        'Igelkott': '',
-        'srong': '',
-        'austin.t.daigle': '',
-        'rgollnisch': '',
-        'lzong': '',
-        'wang0207': '',
-        'solomonsloat': '',
-        'JiatongLiang': ''
+        'Igelkott': {'sweep': '', 'demographic': 'moments w/ windowed SFS'},
+        'srong': {'sweep': 'composite of multiple summary statistics. 51 SNP windows with a step size of 10 SNPs', 'demographic': 'Relate (Spiedel et al. 2019) and gLike (Fan et al, 2025)'},
+        'huangdaxian': {'sweep': "Tajima's D from scikit-allel and haplotype-based methods from the selscan. Various window sizes.", 'demographic': ''},
+        'tstentella': {'sweep': '', 'demographic': 'HetDister.jl'},
+        'avaughn': {'sweep': 'Derived allele frequency', 'demographic': 'mushi and metagaming'},
+        'alouette': {'sweep': 'moments to calculate Dz statistic', 'demographic': ''},
+        'peterlaurin': {'sweep': 'H12 and Domain Adaptation Neural Network', 'demographic': ''},
+
+        'austin.t.daigle': {'sweep': '', 'demographic': ''},
+        'rgollnisch': {'sweep': '', 'demographic': ''},
+        'lzong': {'sweep': '', 'demographic': ''},
+        'wang0207': {'sweep': '', 'demographic': ''},
+        'solomonsloat': {'sweep': '', 'demographic': ''},
+        'JiatongLiang': {'sweep': '', 'demographic': ''},
     }

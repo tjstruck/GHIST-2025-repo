@@ -1,0 +1,15 @@
+
+VCFtools - 0.1.18
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf data/vcf/GHIST_2025_multisweep.15.final.vcf.gz
+	--out results/out
+	--window-pi 10000
+
+Using zlib version: 1.2.12
+After filtering, kept 25 out of 25 Individuals
+Outputting Windowed Nucleotide Diversity Statistics...
+Calculating Windowed Nucleotide Diversity without a mask can give misleading results. It is recommended you use a mask to define well characterized sites in the genome.
+After filtering, kept 278114 out of a possible 278114 Sites
+Run Time = 0.00 seconds

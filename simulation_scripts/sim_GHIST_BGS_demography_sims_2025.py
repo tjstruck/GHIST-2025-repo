@@ -39,7 +39,7 @@ shape = 0.21
 scale = 3.28e-3
 
 chroms = ["2L", "2R", "3L", "3R"]
-dems = ["SplitMig_testing_20kPop", "SplitMig_final_20kPop", "AfricanGrowth_initial_10kPop", "AfricanGrowth_final_10kPop", ]
+dems = ["SplitMig_final_20kPop", "SplitMig_testing_20kPop", "AfricanGrowth_final_10kPop", "AfricanGrowth_initial_10kPop", ]
 
 run = []
 for dem in dems:

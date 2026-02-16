@@ -1,0 +1,10 @@
+RRMSE & $T$ & $\nu$ & Competitor & Approach\\
+truth & 2025.6318740000002 & 0.2975 & & \\
+3.8658 & 9650.0 & 0.5598 & JiatongLiang & insert \\
+0.8608 & 3620.9754 & 0.4008 & srong & insert \\
+0.6875 & 3416.0 & 0.2859 & solomonsloat & insert \\
+0.6092 & 3250.0 & 0.275 & rgollnisch & insert \\
+0.5186 & 1840.9677 & 0.4494 & wang0207 & insert \\
+0.5113 & 3050.0 & 0.275 & avaughn & insert \\
+0.4701 & 2965.1 & 0.2747 & tstentella & insert \\
+0.1138 & 2160.0 & 0.27 & austin.t.daigle & insert \\

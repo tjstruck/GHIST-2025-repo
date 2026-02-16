@@ -115,17 +115,17 @@ class ScoreSweeps:
             (self.true_positive_count +\
             (self.false_negative_count + self.false_positive_count_weighted) / 2)
 
-submissionfile = 'final_submissions/multi_sweep_with_background_selection/multi_sweep_with_background_selection_3561154.bed'
-goldstandardfile = 'groundtruth/GHIST_2025_multi_sweep_bgs_final_goldstandard.bed'
+# submissionfile = 'final_submissions/multi_sweep_with_background_selection/multi_sweep_with_background_selection_3561154.bed'
+# goldstandardfile = 'groundtruth/GHIST_2025_multi_sweep_bgs_final_goldstandard.bed'
 
-submissionfile = 'final_submissions/multi_sweep/multi_sweep_3561154.bed'
-goldstandardfile = 'groundtruth/GHIST_2025_multi_sweep_final_goldstandard.sweeps.bed'
+# submissionfile = 'final_submissions/multi_sweep/multi_sweep_3561154.bed'
+# goldstandardfile = 'groundtruth/GHIST_2025_multi_sweep_final_goldstandard.sweeps.bed'
 
-sweepscore = ScoreSweeps(submissionfile, goldstandardfile)
+# sweepscore = ScoreSweeps(submissionfile, goldstandardfile)
 
-sweepscore.calculate_stats()
-recall = sweepscore.true_positive_count / (sweepscore.true_positive_count + sweepscore.false_negative_count)
-size = np.sum(sweepscore.interval_lengths) / 1e5
-f1 = sweepscore.f1
+# sweepscore.calculate_stats()
+# recall = sweepscore.true_positive_count / (sweepscore.true_positive_count + sweepscore.false_negative_count)
+# size = np.sum(sweepscore.interval_lengths) / 1e5
+# f1 = sweepscore.f1
 
-print(recall, size, f1)
+# print(recall, size, f1)
