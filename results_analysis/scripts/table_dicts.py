@@ -94,18 +94,44 @@ def method_dict(uid):
     :param uid: Description
     '''
     method_dict = {
-        'Igelkott': {'sweep': '', 'demographic': 'moments w/ windowed SFS'},
+        'Igelkott': {'sweep': '', 'demographic': 'moments w/ windowed SFS'}, # Might wan to flesh out specifics
         'srong': {'sweep': 'composite of multiple summary statistics. 51 SNP windows with a step size of 10 SNPs', 'demographic': 'Relate (Spiedel et al. 2019) and gLike (Fan et al, 2025)'},
         'huangdaxian': {'sweep': "Tajima's D from scikit-allel and haplotype-based methods from the selscan. Various window sizes.", 'demographic': ''},
         'tstentella': {'sweep': '', 'demographic': 'HetDister.jl'},
         'avaughn': {'sweep': 'Derived allele frequency', 'demographic': 'mushi and metagaming'},
         'alouette': {'sweep': 'moments to calculate Dz statistic', 'demographic': ''},
-        'peterlaurin': {'sweep': 'H12 and Domain Adaptation Neural Network', 'demographic': ''},
+        'peterlaurin': {'sweep': 'H12', 'sweep_bgs': 'H12 and Domain Adaptation Neural Network', 'demographic': ''},
+        'rgollnisch': {'sweep': 'RAiSD (Alachiotis and Pavlidis 2018)', 'demographic': 'Stairway Plot 2 (Liu and Fu 2020)'},
 
         'austin.t.daigle': {'sweep': '', 'demographic': ''},
-        'rgollnisch': {'sweep': '', 'demographic': ''},
         'lzong': {'sweep': '', 'demographic': ''},
         'wang0207': {'sweep': '', 'demographic': ''},
         'solomonsloat': {'sweep': '', 'demographic': ''},
         'JiatongLiang': {'sweep': '', 'demographic': ''},
     }
+    return method_dict[uid]
+
+def method_detailed_dict(uid):
+    '''
+    Returns the value of a dictionary that takes uid as a 
+    key connecting to the method used.
+    
+    :param uid: Description
+    '''
+    method_dict = {
+        'Igelkott': {'sweep': '', 'demographic': 'moments w/ windowed SFS'}, # Might wan to flesh out specifics
+        'srong': {'sweep': 'composite of multiple summary statistics. 51 SNP windows with a step size of 10 SNPs', 'demographic': 'Relate (Spiedel et al. 2019) and gLike (Fan et al, 2025)'},
+        'huangdaxian': {'sweep': "Tajima's D from scikit-allel and haplotype-based methods from the selscan. Various window sizes.", 'demographic': ''},
+        'tstentella': {'sweep': '', 'demographic': 'HetDister.jl'},
+        'avaughn': {'sweep': 'Derived allele frequency', 'demographic': 'mushi and metagaming'},
+        'alouette': {'sweep': 'moments to calculate Dz statistic', 'demographic': ''},
+        'peterlaurin': {'sweep': 'H12', 'sweep_bgs': 'H12 and Domain Adaptation Neural Network', 'demographic': ''},
+        'rgollnisch': {'sweep': 'RAiSD (Alachiotis and Pavlidis 2018)', 'demographic': 'Stairway Plot 2 (Liu and Fu 2020)'},
+
+        'austin.t.daigle': {'sweep': '', 'demographic': ''},
+        'lzong': {'sweep': '', 'demographic': ''},
+        'wang0207': {'sweep': '', 'demographic': ''},
+        'solomonsloat': {'sweep': '', 'demographic': ''},
+        'JiatongLiang': {'sweep': '', 'demographic': ''},
+    }
+    return method_dict[uid]

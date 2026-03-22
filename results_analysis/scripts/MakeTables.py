@@ -1,5 +1,5 @@
 from pathlib import Path
-import os, glob, yaml, sys
+import os, glob, yaml, sys, pickle
 import numpy as np, matplotlib.pyplot as plt
 
 sys.path.insert(1, 'scripts')
@@ -15,21 +15,27 @@ res_dd = {}
 for groundtruthfi in glob.glob("data/groundtruth/*"):
     chal = Path(groundtruthfi).stem.split('GHIST_2025_')[-1].split('_final_goldstandard')[0]
     res_dd[chal] = {}
+    if 'sweep' in chal:
+        chal_method = 'sweep'
+    else:
+        chal_method = 'demographic'
     chal_res = open(f"{table_dir}/{chal}_res_table.latex", 'w')
     if 'sweep' in chal:
         keys = ['Recall', 'Size']
-        chal_res.write(f"F1 & Recall & Size (x100 kb) & Competitor & Approach\\\\\n")
+        chal_res.write(f"$F1$ & $Recall$ & $Size (x100 kb)$ & Competitor & Approach\\\\\n")
+        chal_res.write("\hline\n")
         chal_res.write(f"truth & {len(open(groundtruthfi).readlines())} & 1e-05 & & \\\\\n")
     else:
         keys, col_dict = demo_dict(chal)
-        chal_res.write(f"RRMSE & {' & '.join([col_dict[key] for key in keys])} & Competitor & Approach\\\\\n")
-
+        chal_res.write(f"$RRMSE$ & {' & '.join([col_dict[key] for key in keys])} & Competitor & Approach\\\\\n")
+        chal_res.write("\hline\n")
         with open(groundtruthfi) as stream:
             try:
                 groundtruth = yaml.safe_load(stream)
             except yaml.YAMLError as exc:
                 print(exc)
 
+        # Truth results
         chal_res.write(f"truth & {' & '.join([str(groundtruth['parameters'][key]) for key in keys])} & & \\\\\n")
     # print(chal, len(glob.glob(f"data/final_submissions/{chal}/*"))/2)
     for fname in glob.glob(f"data/final_submissions/{chal}/*"):
@@ -46,6 +52,7 @@ for groundtruthfi in glob.glob("data/groundtruth/*"):
             res_dd[chal][uid]['Size'] = np.sum(sweepscore.interval_lengths) / 1e5
             res_dd[chal][uid]['F1'] = sweepscore.f1
             sort_by = "F1"
+            rev = True
 
         else:
             with open(fname) as stream:
@@ -61,13 +68,21 @@ for groundtruthfi in glob.glob("data/groundtruth/*"):
             for key in keys:
                 res_dd[chal][uid][key] = float(submission['parameters'][key])
             sort_by = "RRMSE"
+            rev = False
 
         # print(chal, uid, RRMSE, recall, size, f1)
-    users_by_truthness = sorted(res_dd[chal], key=lambda u: res_dd[chal][u][sort_by], reverse=True)
+
+    users_by_truthness = sorted(res_dd[chal], key=lambda u: res_dd[chal][u][sort_by], reverse=rev)
     for uid in users_by_truthness:
-        chal_res.write(f"{round(res_dd[chal][uid][sort_by], 4)} & {' & '.join([str(round(res_dd[chal][uid][key], 4)) for key in keys])} & {uid} & insert \\\\\n")
+        methods = method_dict(uid)
+        print(uid)
+        try:
+            chal_res.write(f"{round(res_dd[chal][uid][sort_by], 4)} & {' & '.join([str(round(res_dd[chal][uid][key], 4)) for key in keys])} & {uid} & {methods[chal_method+'_bgs']} \\\\\n")
+        except KeyError:
+            chal_res.write(f"{round(res_dd[chal][uid][sort_by], 4)} & {' & '.join([str(round(res_dd[chal][uid][key], 4)) for key in keys])} & {uid} & {methods[chal_method]} \\\\\n")
     chal_res.close()
 
+pickle.dump(res_dd, open("results/results.bpkl", 'wb'))
 
 # finals = glob.glob("data/final_submissions/*/*")
 
