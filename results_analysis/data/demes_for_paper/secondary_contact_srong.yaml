@@ -1,0 +1,19 @@
+description: population_1-population_2 population split and delayed migration.
+time_units: generations
+generation_time: 1
+demes:
+- name: ancestral
+  epochs:
+  - {end_time: 10000, start_size: 34000}#47362.0}
+- name: Population_1
+  ancestors: [ancestral]
+  epochs:
+  - {start_size: 9000, end_size: 25000}
+- name: Population_2
+  ancestors: [ancestral]
+  epochs:
+  - {start_size: 9000, end_size: 17000}
+migrations:
+- demes: [Population_1, Population_2]
+  rate: 0.00005
+  start_time: 1000
