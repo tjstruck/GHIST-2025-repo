@@ -87,7 +87,7 @@ for chal_deets in [('multi_sweep_bgs', 'chal9', 'final'), ('multi_sweep', 'chal8
     intervals = [(int(line.split()[1]), int(line.split()[2])) for line in fid if line.strip()]
     fid.close()
 
-    if chal_type is not 'testing':
+    if chal_type != 'testing':
         for ax in axs:
             for left, right in intervals:
                 ax.axvspan(left, right, color='green', alpha=0.3)
