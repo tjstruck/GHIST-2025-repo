@@ -5,6 +5,8 @@ import pickle, demes, demesdraw, os
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 
+os.makedirs("results/paper/", exist_ok=True)
+
 res_dd = pickle.load(open("results/results.bpkl",'rb'))
 
 fig = plt.figure(figsize=(4.2, 4.2), constrained_layout=True)

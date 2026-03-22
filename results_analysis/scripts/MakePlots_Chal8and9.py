@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+os.makedirs("results/paper/", exist_ok=True)
+
 chal_type2chrom = {
     'testing':'21',
     'final':'15'

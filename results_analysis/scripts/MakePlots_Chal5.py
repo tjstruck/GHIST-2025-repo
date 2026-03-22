@@ -1,8 +1,10 @@
 '''
 Run after MakeTabels.py
 '''
-import demes, demesdraw, matplotlib
+import demes, demesdraw, os
 import matplotlib.pyplot as plt
+
+os.makedirs("results/paper/", exist_ok=True)
 
 true_demes = demes.load(f"data/demes_for_paper/demes_GHIST_2025_admixture.final.yaml")
 

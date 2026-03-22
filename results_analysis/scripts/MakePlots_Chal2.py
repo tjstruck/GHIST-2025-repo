@@ -1,8 +1,10 @@
 '''
 Run after MakeTabels.py
 '''
-import demes, demesdraw
+import demes, demesdraw, os
 import matplotlib.pyplot as plt
+
+os.makedirs("results/paper/", exist_ok=True)
 
 fig, axs = plt.subplots(2, 1, figsize=(4, 6))#, sharex=True)
 
