@@ -27,7 +27,7 @@ axC = fig.add_subplot(gs[1, :])  # span all columns
 axC.set_xlabel('Generations ago')
 axC.set_ylabel('Decline fraction')
 
-true_demes = demes.load(f"data/demes_for_paper/demes_GHIST_2025_{chal}.final.yaml")
+true_demes = demes.load(f"data/demes_for_paper/demes_GHIST_2025_bottleneck.final.yaml")
 true_demes.demes[0].name = ''
 demesdraw.tubes(true_demes, seed=1234, colours='black', ax=axA)
 axA.set_ylabel('Generations ago')
