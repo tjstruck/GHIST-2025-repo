@@ -6,8 +6,8 @@ Andrew Vaughn	avaughn	3508906	avaughn@synapse.org	https://www.synapse.org/Synaps
 "Xmon (Simon Chen, Xin Huang)"	huangdaxian	3557947	huangdaxian@synapse.org	https://www.synapse.org/Synapse:syn71782688/wiki/635907
 Alexander Mackintosh	Igelkott	3550636	Igelkott@synapse.org	https://www.synapse.org/Synapse:syn68818816/wiki/633863
 Stephen Rong	srong	3446506	srong@synapse.org	https://www.synapse.org/Synapse:syn68818816/wiki/633863
-Austin Daigle	austin.t.daigle	3508154	austin.t.daigle@synapse.org	
-Raphael Gollnisch	rgollnisch	3554268	rgollnisch@synapse.org	
+Austin Daigle	austin.t.daigle	3508154	austin.t.daigle@synapse.org	https://www.synapse.org/Synapse:syn68596710/wiki/639466
+Raphael Gollnisch	rgollnisch	3554268	rgollnisch@synapse.org	https://www.synapse.org/Synapse:syn69045934/wiki/634051
 Leon Zong	lzong	3553843	lzong@synapse.org	
 Weiqi Wang	wang0207	3554444	wang0207@synapse.org	
 Solomon Sloat	solomonsloat	3547691	solomonsloat@synapse.org	
